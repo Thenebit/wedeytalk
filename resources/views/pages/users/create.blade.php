@@ -15,8 +15,8 @@
              <div class="featured-image mb-3">
               <img src="assets/img/TempImg/tmp1.png" class="img-fluid" style="width: 250px;">
              </div>
-             <p class="text-white fs-2" style="font-family: 'Courier New', Courier, monospace; font-weight: 600;">Be A Thenebit</p>
-             <small class="text-white text-wrap text-center" style="width: 17rem;font-family: 'Courier New', Courier, monospace;">Publish your tech news on this platform.</small>
+             <p class="text-white fs-2" style="font-family: 'Courier New', Courier, monospace; font-weight: 600;">Drop Your Mind</p>
+             <small class="text-white text-wrap text-center" style="width: 17rem;font-family: 'Courier New', Courier, monospace;">Pubsh your ideas on the platform for everyone to talk.</small>
          </div> 
   
       <!-------------------- ------ Right Box ---------------------------->
@@ -25,26 +25,29 @@
             <div class="row align-items-center">
                   <div class="header-text mb-4">
                     {{-- Add an emoji hello hand to h2 below --}}
-                       <h2>Hello, Again</h2> 
-                       <p>Let's Go Thenebits</p>
+                       <h2>Hello, WeDeyTalkers</h2> 
+                       <p>Drop The Mind Bombs</p>
                   </div>
   
-                  {{-- <script>
+                  <script>
                     @if(session('success'))
                         alert('{{ session('success') }}');
                     @endif
                     @if(session('message'))
                         alert('{{ session('message') }}');
                     @endif
-                  </script> --}}
+                  </script>
   
-                  <form action="" method="POST" enctype="multipart/form-data">
+                  <form action="{{ url('save') }}" method="POST" enctype="multipart/form-data">
                     @csrf
+
+                    <input type="hidden" name="user_id" value="{{ Auth::id() }}">
+
                     <div class="input-group mb-3">
                         <input type="text" class="form-control form-control-lg bg-light fs-6" name="author" placeholder="Author" required>
                     </div>
                     <div class="input-group mb-3">
-                      <input type="text" class="form-control form-control-lg bg-light fs-6" name="postType" placeholder="Content Type eg.Web" required>
+                      <input type="text" class="form-control form-control-lg bg-light fs-6" name="postType" placeholder="Content Type eg.LifeStyle" required>
                     </div>
                     <div class="input-group mb-3">
                       <input type="file" class="form-control form-control-lg bg-light fs-6" name="image" required>

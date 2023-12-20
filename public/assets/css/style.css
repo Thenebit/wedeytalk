@@ -158,7 +158,7 @@ a:hover {
   text-decoration: none;
   font-size: 3rem;
   font-weight: bold;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .subtitle-a {
